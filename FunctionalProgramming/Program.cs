@@ -38,27 +38,26 @@ namespace FunctionalProgramming
 
         public static string ReturnOrderedNumberedString(string item)
         {
-            string final = 
+            string final =
                 string.Join
                 (
-                    "", 
+                    "",
                     string.Join(",", item.ToCharArray())
                     .Split(',')
                     .ToArray()
                     .OrderBy(a => a)
                     .GroupBy(s => s)
                     .Select
-                    (group => 
+                    (group =>
                         (group.Key.ToUpper()) + "" + Convert.ToString(group.Count())
-                    )                    
+                    )
                 );
 
             return final;
         }
 
-        public static 
-    }
 
+    }
 }      
 
 
